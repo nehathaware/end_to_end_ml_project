@@ -5,9 +5,11 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 from src.pipelines.predict_pipeline import CustomData, PredictPipeline
 
-app=Flask(__name__)
+application=Flask(__name__)
 
-# Rout for home page
+app=application
+
+# Route for home page
 @app.route("/")
 def index():
     return render_template('index.html')
